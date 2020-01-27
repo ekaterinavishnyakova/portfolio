@@ -1,0 +1,6 @@
+ul.social-media
+    - var icons = ["insta", "vk", "github"]
+    each item in icons
+        li.social-media__item
+            a.social-media__link(href="#")
+                +icon(item, "social-media__icon")
