@@ -1,31 +1,20 @@
+function parallax(areaName) {
+    const area = document.querySelector(areaName);
+    const layers = area.querySelectorAll('.js-parallax__layer');
 
-var parallax = (function () {
-    var layerGrass = document.querySelector('.mainidea-parallax__layer--grass');
-    var layerMountains = document.querySelector('.mainidea-parallax__layer--mountains');
-    var layerTrain = document.querySelector('.mainidea-parallax__layer--train');
+    window.addEventListener('scroll', function () {
+        const coord = area.getBoundingClientRect();
 
+        if (coord.top < area.clientHeight && coord.bottom > 0) {
+            const windowScroll = window.pageYOffset;
+            Array.from(layers).forEach(layer => {
+                const scrollSpeed = layer.dataset.speed;
+                const strafe = windowScroll * scrollSpeed / 8;
 
-    return {
-        move: function (block, windowScroll, strafeAmount) {
-            var strafe = windowScroll / -strafeAmount + '%';
-            var transformString = 'translate3d(0, ' + strafe + ', 0)';
-            var style = block.style;
-
-            style.transform = transformString;
-            style.webkitTransform = transformString;
-        },
-
-        init: function (wScroll) {
-            this.move(layerGrass, wScroll, 25);
-            this.move(layerMountains, wScroll, 35);
-            this.move(layerTrain, wScroll, 29);
+                layer.style.transform = `translateY(-${strafe}px)`;
+            });
         }
-    }
-}());
-
-window.addEventListener('scroll', function () {
-    var wScroll = window.pageYOffset;
-    parallax.init(wScroll);
-    console.log(wScroll);
-});
-
+    });
+}
+parallax('.js-parallax__feedback');
+parallax('.js-parallax__mainidea');

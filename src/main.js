@@ -4,7 +4,7 @@ if (process.env.NODE_ENV === "development") {
 }
 
 
-//import "./scripts/parallax";
-import "./scripts/feedback-parallax";
+
+import "./scripts/parallax";
 import "./scripts/skills";
 import "./scripts/works";
