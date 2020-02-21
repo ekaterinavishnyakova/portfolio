@@ -1,0 +1,24 @@
+section.section.about-me#about-me
+    .container.about-me__container
+        .about-me__info
+            .about-me__photo
+                +image('content/mainidea/user-img.jpg', 'about-me__img', 'Фотография пользователя')
+            .about__table
+                -
+                     var rows = [
+                            ["Проживаю:", "Калининград"],
+                            ["Возраст:", "28 лет"],
+                            ["Родился:", "2 января"],
+                    ]
+                table.about-me__table
+                    each row in rows
+                        tr.about-me__table-row
+                            each cell in row
+                                td.about-me__table-cell #{cell}
+        .about-me__text
+            .about-me__greeting Привет, меня зовут
+            h2.about-me__title.title Екатерина Вишнякова
+            .about-me__description 
+                p Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
+                p.about-me__description-site Этот сайт я сделала в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!
+            

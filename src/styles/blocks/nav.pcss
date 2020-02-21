@@ -1,16 +1,18 @@
-.menu__list {
-    display: flex;
+.nav__list {
+  display: flex;
+  @include tablets {
+    display: none;
+  }
 }
 
-.menu__item {
-    margin-right: 60px;
-    &:last-child {
-        margin-right: 0;
-    }
+.nav__item {
+  margin-right: 60px;
+  &:last-child {
+    margin-right: 0;
+  }
 }
 
-.menu__link {
-    color: $white;
-    line-height: 1.88;
+.nav__link {
+  color: $white;
+  line-height: 1.88;
 }
-

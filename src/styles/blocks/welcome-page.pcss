@@ -4,6 +4,7 @@
   align-items: center;
   justify-content: center;
   height: 100vh;
+  min-height: 570px;
 }
 
 .welcome-page__container {
@@ -21,6 +22,9 @@
   line-height: 1.67;
   color: rgba(255, 255, 255, 0.4);
   margin-right: 40px;
+  @include tablets {
+    text-align: center;
+  }
 }
 
 .welcome-page__title {
@@ -30,11 +34,20 @@
   text-align: center;
   color: $white;
   display: flex;
+  @include tablets {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
 }
 
 .welcome-page__scroll {
   position: absolute;
   bottom: 10%;
+  @include tablets {
+    display: none;
+  }
 }
 
 .welcome-page__scroll-btn {

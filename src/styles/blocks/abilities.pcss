@@ -5,13 +5,27 @@
   background-size: cover;
   position: relative;
   overflow: visible;
-  &::after {
-      content: url(~images/content/abilities/hands-with-keyboard.png);
+  &::before {
+    content: url(~images/content/abilities/hands-with-keyboard.png);
+    position: absolute;
+    width: 382px;
+    height: 670px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 11;
+    overflow: visible;
+    @include tablets {
+      height: 337px;
+      width: 486px;
       position: absolute;
-      top: 36%;
-      left: 0;
-      z-index: 11;
-      overflow: visible;
+      left: 18%;
+      bottom: -100px;
+      top: 0;
+      right: 0;
+      transform: rotate(-90deg);
+    }
   }
 }
 
@@ -19,6 +33,9 @@
   padding-left: 30%;
   padding-top: 170px;
   padding-bottom: 150px;
+  @include tablets {
+    padding: 0 0;
+  }
 }
 
 .abilities__title {
@@ -37,50 +54,68 @@
   margin-bottom: 90px;
 }
 
-.abilities__group-name {
-  font-size: 24px;
-  font-weight: bold;
-  color: $white;
-  margin-bottom: 50px;
+
+
+.ability {
+  &__circle {
+      stroke-dasharray: 351;
+
+      &--possible {
+          stroke: #eaeaea;
+          stroke-width: 2px;
+          opacity: 0.1;
+      }
+
+      &--actual {
+          stroke-width: 7px;
+          stroke-dasharray: 251;
+          stroke-dashoffset: 251;
+      }
+  }
+
 }
 
-.abilities__item {
+.abilities-row__list {
+  display: flex;
+  margin-top: 20px;
+}
+
+.abilities-row__item {
+  list-style: none;
   position: relative;
-  display: inline-block;
-  margin-right: 45px;
+  margin-right: 40px;
+
   &:last-child {
       margin-right: 0;
   }
 }
 
-.abilities__circle {
-  display: block;
-  stroke: #e9e9e9;
-  opacity: 0.1;
-  stroke-width: 3px;
-  fill: none;
-  &--possible {
-    stroke-dasharray: 420;
-  }
-  &--actual {
-    stroke-dasharray: 420;
-    stroke-width: 10px;
-    opacity: 1;
-    stroke: url(#gradient-html);
-    transform-origin: 50% 50%;
-    transform: rotate(-180deg);
-  }
+.ability {
+  position: relative;
 }
 
-.abilities__name {
-  display: flex;
+.ability__icon {
+  width: 150px;
+  height: 150px;
+  fill: none;
+}
+
+.ability__name {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -60%);
+  transform: translate(-50%, -50%);
   text-align: center;
-  line-height: 1.67;
+  opacity: 0.5;
+  color: red;
   font-size: 18px;
-  font-weight: bold;
-  color: rgba(255, 255, 255, 0.5);
+  font-weight: 700;
+  line-height: 1.67;
+}
+
+.abilities-row__title {
+  color: red;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 2;
 }

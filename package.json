@@ -50,7 +50,9 @@
     "last 2 versions"
   ],
   "dependencies": {
+    "jquery": "^3.4.1",
     "normalize.css": "^8.0.1",
+    "npmm": "^0.4.0",
     "promptly": "^3.0.3",
     "pug": "^2.0.4",
     "request": "^2.88.0",

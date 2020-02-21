@@ -1,0 +1,9 @@
+mixin socials(mod)
+    - var icons = ["insta", "vk", "github"]
+    - var link = ["https://www.instagram.com/graf.vishnya/", "https://vk.com/id5807698", "https://github.com/ekaterinavishnyakova" ]
+ul.social-media
+    - var icons = ["insta", "vk", "github"]
+    each item in icons
+        li(class="social-media__item social-media__item--" + mod)
+            a.social-media__link(href=`${link}`)
+                +icon(item, "social-media__icon")
