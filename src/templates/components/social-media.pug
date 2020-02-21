@@ -1,7 +1,7 @@
-mixin socials(mod)
+mixin social-media(mod)
     - var icons = ["insta", "vk", "github"]
     - var link = ["https://www.instagram.com/graf.vishnya/", "https://vk.com/id5807698", "https://github.com/ekaterinavishnyakova" ]
-ul.social-media
+ul.social-media.social-media--footer
     - var icons = ["insta", "vk", "github"]
     each item in icons
         li(class="social-media__item social-media__item--" + mod)
