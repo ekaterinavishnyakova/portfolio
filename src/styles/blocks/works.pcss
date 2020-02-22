@@ -1,123 +1,25 @@
-.works {
+.works-section {
   position: relative;
   background-color: $white;
   overflow: visible;
+  z-index: 1;
 }
 
-.works__container {
+.works-section__container {
   min-height: 650px;
-  padding: 150px 60px;
-  &::before{
-    content: '2';
-    font-size: 300px;
-    font-weight: 800;
-    color: #e6e6e6;
-    position: absolute;
-    top: 20%;
-    right: 35%;
-  }
+  padding: 150px 20px;
 }
 
-.works__title {
+.works-section__title {
   font-size: 36px;
   font-weight: bold;
   color: #333c49;
   margin-bottom: 60px;
 }
 
-.works__content {
+.works-section__content {
   display: flex;
   justify-content: center;
-  
-}
-
-.works__slider {
-  flex: 7;
-  max-width: 622px;
-  max-height: 353px;
-  position: relative;
-  margin-right: 100px;
-}
-
-.works__img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
 }
-
-.works__preview {
-  position: absolute;
-  bottom: 5%;
-  right: 0;
-}
-
-.works__preview-list {
-  display: flex;
-  justify-content: flex-end;
-}
-
-.works__preview-item {
-  max-width: 178px;
-  max-height: 100px;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-}
-
-.works__desc {
-  flex: 4;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  position: relative;
-}
-
-.works__keywords-list {
-  display: flex;
-  margin-bottom: 40px;
-}
-
-.works__keywords-item {
-  opacity: 0.1;
-  border-radius: 22.5px;
-  background-color: #859ec2;
-  font-size: 15px;
-  font-weight: 600;
-  color: rgba(47, 54, 66);
-  text-align: center;
-  padding: 17px 20px;
-  margin-right: 10px;
-  &:last-child {
-    margin-right: 0;
-  }
-}
-
-.works__info-title {
-  font-size: 30px;
-  font-weight: bold;
-  color: #353e4f;
-  margin-bottom: 50px;
-}
-
-.works__info-text {
-  font-weight: 600;
-  line-height: 1.88;
-  color: rgba(51, 60, 73, 0.7);
-  margin-bottom: 50px;
-}
-
-.works__link-title {
-  font-size: 18px;
-  font-weight: bold;
-  color: #586ed3;
-  position: relative;
-}
-
-.works__link-icon {
-  width: 15px;
-  height: 15px;
-  fill: #586ed3;
-  margin-right: 20px;
-}
-
-

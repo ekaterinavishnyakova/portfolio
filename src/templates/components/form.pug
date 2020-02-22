@@ -1,0 +1,29 @@
+section.section.form
+    .container.form__container
+        h1.title.form__title Связаться со мной
+        form.form(action="")
+            .form__row
+                .form__column
+                    label.form__input(for="")
+                        .form__input-name Введите ваше имя
+                        .form__input-value 
+                            input.form__input-item(type="text")
+                            +icon('user', 'form__icon')
+                            .form__input-problem
+                .form__column
+                    label.form__input(for="")
+                        .form__input-name Введите ваш e-mail
+                        .form__input-value 
+                            input.form__input-item(type="email")
+                            +icon('envelope', 'form__icon')
+                            .form__input-problem
+            .form__row
+                label.form__textarea
+                    .form__input-name Сообщение к письму
+                    .form__input-value
+                        textarea.form__textarea-item(type='text')
+                        +icon('message', 'form__icon')
+                        .form__textarea-problem
+            button.form__btn(type='submit') Отправить
+
+

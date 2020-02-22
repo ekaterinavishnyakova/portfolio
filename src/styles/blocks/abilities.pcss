@@ -5,13 +5,28 @@
   background-size: cover;
   position: relative;
   overflow: visible;
-  &::after {
-      content: url(~images/content/abilities/hands-with-keyboard.png);
+  &::before {
+    content: url(~images/content/abilities/hands-with-keyboard.png);
+    position: absolute;
+    max-width: 382px;
+    max-height: 670px;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 11;
+    overflow: visible;
+    @include tablets {
+      display: none;
+      max-height: 337px;
+      max-width: 486px;
+      width: 100%;
+      height: 100%;
       position: absolute;
-      top: 36%;
       left: 0;
-      z-index: 11;
-      overflow: visible;
+      bottom: 0;
+      top: 50%;
+      transform: rotate(-90deg);
+    }
   }
 }
 
@@ -19,6 +34,9 @@
   padding-left: 30%;
   padding-top: 170px;
   padding-bottom: 150px;
+  @include tablets {
+    padding: 120px 90px 360px;
+  }
 }
 
 .abilities__title {
@@ -26,6 +44,11 @@
   font-weight: bold;
   line-height: 1.2;
   color: $white;
+  @include tablets {
+    text-align: center;
+    
+  }
+  
 }
 
 .abilities__desc {
@@ -35,52 +58,81 @@
   width: 70%;
   margin-top: 60px;
   margin-bottom: 90px;
-}
-
-.abilities__group-name {
-  font-size: 24px;
-  font-weight: bold;
-  color: $white;
-  margin-bottom: 50px;
-}
-
-.abilities__item {
-  position: relative;
-  display: inline-block;
-  margin-right: 45px;
-  &:last-child {
-      margin-right: 0;
+  @include tablets {
+    text-align: center;
+    width: 100%;
   }
 }
 
-.abilities__circle {
-  display: block;
-  stroke: #e9e9e9;
-  opacity: 0.1;
-  stroke-width: 3px;
-  fill: none;
-  &--possible {
-    stroke-dasharray: 420;
+
+
+.ability {
+  &__circle {
+      stroke-dasharray: 351;
+
+      &--possible {
+          stroke: #eaeaea;
+          stroke-width: 2px;
+          opacity: 0.1;
+      }
+
+      &--actual {
+          stroke-width: 7px;
+          stroke-dasharray: 251;
+          stroke-dashoffset: 251;
+      }
   }
-  &--actual {
-    stroke-dasharray: 420;
-    stroke-width: 10px;
-    opacity: 1;
-    stroke: url(#gradient-html);
-    transform-origin: 50% 50%;
-    transform: rotate(-180deg);
-  }
+
 }
 
-.abilities__name {
+.abilities-row__list {
   display: flex;
+  margin-top: 20px;
+}
+
+.abilities-row__item {
+  list-style: none;
+  position: relative;
+  margin-right: 40px;
+  width: 100%;
+  height: 100%;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.ability {
+  position: relative;
+}
+
+.ability__icon {
+  width: 150px;
+  height: 150px;
+  width: 100%;
+  height: 100%;
+  fill: none;
+}
+
+.ability__name {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -60%);
+  transform: translate(-50%, -50%);
   text-align: center;
-  line-height: 1.67;
+  opacity: 0.5;
+  color: $main-color;
   font-size: 18px;
-  font-weight: bold;
-  color: rgba(255, 255, 255, 0.5);
+  font-weight: 700;
+  line-height: 1.67;
+}
+
+.abilities-row__title {
+  color: $main-color;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 2;
+  @include tablets {
+    text-align: center;
+  }
 }

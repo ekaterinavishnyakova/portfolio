@@ -1,4 +1,4 @@
-include ./mixins.pug
+include ./templates/mixins.pug
 
 <!DOCTYPE html>
 html(lang="en")
@@ -9,18 +9,17 @@ html(lang="en")
     title Portfolio | main page
   body
     .wrapper
-      include ./components/header.pug
+      include ./templates/components/header
       main.main
         .main-idea
-          include ./components/mainidea-parallax
-          include ./components/welcome-page.pug
-          include ./components/about-me.pug
-        include ./components/abilities.pug
-        include ./components/works.pug
+          include ./templates/components/mainidea-parallax
+          include ./templates/components/welcome-page
+          include ./templates/components/about-me
+        include ./templates/components/abilities
+        include ./templates/components/works
         .feedback
-          include ./components/feedback-parallax
-          include ./components/reviews
-          include ./components/form
-      include ./components/footer.pug
-  
-        
+          include ./templates/components/feedback-parallax
+          include ./templates/components/reviews
+          include ./templates/components/form
+      include ./templates/components/footer
+    include ./templates/entry.pug

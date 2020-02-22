@@ -1,0 +1,68 @@
+.mainidea-parallax {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  @include tablets {
+    display: none;
+  }
+}
+
+.mainidea-parallax__img {
+  object-fit: cover;
+  object-position: top;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+
+.mainidea-parallax__layer {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 70vh;
+  will-change: transform;
+
+  &--sky {
+    .mainidea-parallax__img {
+      top: 0;
+    }
+  }
+
+  &--mountains {
+    .mainidea-parallax__img {
+      top: 45vh;
+    }
+  }
+
+  &--train {
+    .mainidea-parallax__img {
+      top: 70vh;
+    }
+  }
+
+  &--grass {
+    .mainidea-parallax__img {
+      top: 110vh;
+    }
+  }
+
+  &--shadow {
+    .mainidea-parallax__img {
+      top: 65vh;
+    }
+  }
+
+  &--about-me {
+    .mainidea-parallax__img {
+      top: 120vh;
+      bottom: -10vh;
+      width: 100%;
+      min-height: 650px;
+      height: 100%;
+      object-fit: fill;
+    }
+  }
+}

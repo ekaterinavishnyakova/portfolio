@@ -1,0 +1,63 @@
+.feedback-parallax {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('~images/content/feedback/autumn.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center bottom;
+    z-index: -1;
+
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        height: 100%;
+        opacity: 0.9;
+        background-image: linear-gradient(to right, #232529 0%, #232528 42%, rgba(34, 36, 39, 0) 100%);
+    }
+}
+
+.feedback-parallax__layer {
+    position: absolute;
+    z-index: 1;
+
+    &:nth-child(1) {
+        top: 20%;
+        right: -5%;
+        width: 616px;
+        height: 442px;
+    }
+
+
+    &:nth-child(2) {
+        bottom: 20%;
+        right: 10%;
+        width: 109px;
+        height: 84px;
+    }
+
+
+    &:nth-child(3) {
+        bottom: 35%;
+        right: 24%;
+        width: 132px;
+        height: 140px;
+    }
+
+
+    &:nth-child(4) {
+        top: 100%;
+        right: 7%;
+        width: 412px;
+        height: 248px;
+    }
+}

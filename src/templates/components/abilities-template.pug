@@ -1,0 +1,27 @@
+script(type='text/x-template')#abilities-list
+    ul.abilities__list
+        li.abilities__item(v-for='ability in abilities')
+            abilities-row(
+                :ability='ability'
+            )
+
+script(type='text/x-template')#abilities-row
+    .abilities-row
+        h3.abilities-row__title {{ability.abilitiesGroup}}
+        ul.abilities-row__list
+            li.abilities-row__item(v-for='(abilityPercent, abilityName) in ability.abilities')
+                ability(
+                    :abilityName='abilityName'
+                    :abilityPercent='abilityPercent'
+                )
+
+script(type='text/x-template')#ability
+    .ability
+        svg.ability__icon(viewBox='0 0 100 100')
+            circle.ability__circle.ability__circle--possible(cx='50' cy='50' r='40')
+            circle.ability__circle.ability__circle--actual(cx='50' cy='50' r='40' ref='color-circle' transform='rotate(180 50 50)' stroke='url(#gradient)')
+            linearGradient(id='gradient' x1='0%' y1='0%' x2='100%' y2='0%')
+                stop(offset='0%' stop-color='#d0731b')
+                stop(offset='100%' stop-color='#dc9322')
+        h4.ability__name {{abilityName}}
+

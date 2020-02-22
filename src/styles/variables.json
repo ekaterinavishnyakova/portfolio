@@ -1,8 +1,17 @@
 {
+  "main-color": "#ffffff",
+  "links-color": "#586ed3",
+  "gray-color": "#333c49",
+  "light-gray-color": "#e6e6e6",
+  "orange-color": "#ff9a00",
+  "red-color": "#db0200",
+  "dark-gray": "#1c1f22",
   "text-color": "#414c63",
-  "links-color": "#4b6fd7",
   "bp-desktop-hd": "1800px",
   "bp-desktop": "1200px",
   "bp-tablets": "768px",
-  "bp-phones": "480px"
+  "bp-phones": "480px",
+
+  "speed": "0.5s"
 }
+
