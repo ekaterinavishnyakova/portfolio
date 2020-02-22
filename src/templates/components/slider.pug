@@ -42,13 +42,13 @@ script(type='text/x-template')#slider-btns
                 @click="$emit('slide', 'prev')"
                 :class='{disabled: currentIndex <= 0}'
             ).slider__arrow-btn.slider__arrow-btn--prev
-                +icon('arrow-down', 'arrow-icon-prev')
+                +icon('arrow-down', 'slider__arrow-icon-prev')
             button(
                 type='button'
                 @click="$emit('slide', 'next')"
                 :class='{disabled: currentIndex === (worksLength - 1)}'
                 ).slider__arrow-btn.slider__arrow-btn--next
-                +icon('arrow-down', 'arrow-icon-next')
+                +icon('arrow-down', 'slider__arrow-icon-next')
 
 script(type='text/x-template')#slider-info
     .slider__info
