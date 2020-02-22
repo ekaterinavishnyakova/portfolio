@@ -8,22 +8,23 @@
   &::before {
     content: url(~images/content/abilities/hands-with-keyboard.png);
     position: absolute;
-    width: 382px;
-    height: 670px;
+    max-width: 382px;
+    max-height: 670px;
     top: 0;
     left: 0;
-    right: 0;
     bottom: 0;
     z-index: 11;
     overflow: visible;
     @include tablets {
-      height: 337px;
-      width: 486px;
+      display: none;
+      max-height: 337px;
+      max-width: 486px;
+      width: 100%;
+      height: 100%;
       position: absolute;
-      left: 18%;
-      bottom: -100px;
-      top: 0;
-      right: 0;
+      left: 0;
+      bottom: 0;
+      top: 50%;
       transform: rotate(-90deg);
     }
   }
@@ -34,7 +35,7 @@
   padding-top: 170px;
   padding-bottom: 150px;
   @include tablets {
-    padding: 0 0;
+    padding: 120px 90px 360px;
   }
 }
 
@@ -43,6 +44,11 @@
   font-weight: bold;
   line-height: 1.2;
   color: $white;
+  @include tablets {
+    text-align: center;
+    
+  }
+  
 }
 
 .abilities__desc {
@@ -52,6 +58,10 @@
   width: 70%;
   margin-top: 60px;
   margin-bottom: 90px;
+  @include tablets {
+    text-align: center;
+    width: 100%;
+  }
 }
 
 
@@ -84,9 +94,11 @@
   list-style: none;
   position: relative;
   margin-right: 40px;
+  width: 100%;
+  height: 100%;
 
   &:last-child {
-      margin-right: 0;
+    margin-right: 0;
   }
 }
 
@@ -97,6 +109,8 @@
 .ability__icon {
   width: 150px;
   height: 150px;
+  width: 100%;
+  height: 100%;
   fill: none;
 }
 
@@ -118,4 +132,7 @@
   font-size: 24px;
   font-weight: 700;
   line-height: 2;
+  @include tablets {
+    text-align: center;
+  }
 }

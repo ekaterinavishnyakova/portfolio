@@ -1,9 +1,11 @@
 .about-me {
     position: relative;
-//  background-image: url(~images/content/mainidea/bg-aboutme.png);
-//  background-position: bottom;
-//  background-size: cover;
-//  background-repeat: no-repeat;
+    @include tablets {
+      background-image: url(~images/content/mainidea/bg-aboutme.png);
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
 }
 
 .about-me__container {
